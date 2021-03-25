@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import PIL
 
 from PIL import Image, ImageOps
