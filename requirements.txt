@@ -3,4 +3,4 @@ numpy
 tensorflow
 streamlit
 keras
-PIL
+PIL==8.0.1
