@@ -47,9 +47,9 @@ if uploaded_file is not None:
         label = label[0][0]
                           
         if label==1:
-            st.subheader("Image is of Dog.")
+            st.subheader("Image is of a Dog.")
         else:
-            st.subheader("Image is of Cat.")
+            st.subheader("Image is of a Cat.")
         
     else:
         print("Please click the button to make predictions.")
