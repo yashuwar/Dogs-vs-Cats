@@ -1,6 +1,5 @@
 numpy
-tensorflow.keras
-tensorflow.image
+tensorflow
 streamlit
 keras
 Pillow
