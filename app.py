@@ -14,18 +14,21 @@ def load_model():
 
 model = load_model()
 
-st.title("Dogs vs. Cats prediction web-app")
-st.write("This is a simple web-app which predicts whether the image that the user uploads contains a cat or a dog.")
-st.write("Connect with me at - https://www.linkedin.com/in/yashwardhan-banta-6566461ab/.")
-st.write("Have a look at the GitHub repo at (I would appreciate it if you could star it) - https://github.com/yashuwar/Dogs-vs-Cats.")
+st.markdown("# Dogs vs. Cats prediction web-app", unsafe_allow_html = True)
+st.markdown("---", unsafe_allow_html = True)
+st.markdown("* This is a simple web-app which predicts whether the image that the user uploads contains a cat or a dog.", unsafe_allow_html = True)
+st.markdown("* Connect with me at - https://www.linkedin.com/in/yashwardhan-banta-6566461ab/.", unsafe_allow_html = True)
+st.markdown("* GitHub repo (I would appreciate it if you could star it) - https://github.com/yashuwar/Dogs-vs-Cats.",  unsafe_allow_html = True)
+st.markdown("---", unsafe_allow_html = True)
 
-st.title("Predictor")
-st.write("Upload an image file below and click on the 'Predict' button that appears below the uploaded image to make the predictions.")
+st.markdown("# Predictor", unsafe_allow_html = True)
+st.markdown("---", unsafe_allow_html = True)
+st.markdown("* Upload an image file below and click on the 'Predict' button that appears below the uploaded image to make the predictions.", unsafe_allow_html = True)
 uploaded_file = st.file_uploader("Image of cat/dog to be uploaded.", type=['png','jpeg','jpg'])
 
 if uploaded_file is not None:
 
-    st.write("File uploaded! File type: ",uploaded_file.type)
+    st.write("File uploaded! File type: "+uploaded_file.type+".")
     
     image = Image.open(uploaded_file)
     st.image(image, caption = 'Uploaded file.', use_column_width = True)
@@ -49,10 +52,12 @@ if uploaded_file is not None:
         label = label[0][0]
                           
         if label==1:
-            st.subheader("The image is of a Dog.")
+            st.markdown("* ### The image is of a Dog.", unsafe_allow_html = True)
         else:
-            st.subheader("The image is of a Cat.")
+            st.markdown("* ### The image is of a Cat.", unsafe_allow_html = True)
         
+        st.markdown("---", unsafe_allow_html = True)
+        st.markdown("### Thank you for using this web-app.", unsafe_allow_html = True)
+        st.markdown("---", unsafe_allow_html = True)
     else:
         print("Please click the button to make predictions.")
-        
