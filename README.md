@@ -1,9 +1,9 @@
 # Dogs-vs-Cats
-#### I have developed a very simple app that predicts whether the image uploaded by the user is that of a cat or a dog (yes, I have indeed deployed the "hello world" of image classification, so to say XD).
+#### I have developed a very simple webapp that predicts whether the image uploaded by the user is that of a cat or a dog (yes, I have indeed deployed the "hello world" of image classification, so to say XD).
 
 # Accuracies
-* On the training data - nearly 90%.
-* On the test data - nearly 90%.
+* On the training data - more than 90%.
+* On the test data - more than 90%.
 
 # Deployment
 * The webapp has been deployed by using the streamlit services. To have a look for yourself, please go to the link mentioned below.
