@@ -1,8 +1,6 @@
 import streamlit as st
-import PIL
 
 from PIL import Image, ImageOps
-
 
 import numpy as np
 import tensorflow as tf
@@ -16,15 +14,20 @@ def load_model():
 
 model = load_model()
 
-st.title("First app")
+st.title("Dogs vs. Cats prediction web-app")
+st.write("This is a simple web-app which predicts whether the image that the user uploads contains a cat or a dog.")
+st.write("Connect with me at - https://www.linkedin.com/in/yashwardhan-banta-6566461ab/.")
+st.write("Have a look at the GitHub repo at (I would appreciate it if you could star it) - https://github.com/yashuwar/Dogs-vs-Cats.")
 
-st.write("Upload an image file below and click the 'Predict' button to make predictions.")
-
+st.title("Predictor")
+st.write("Upload an image file below and click on the 'Predict' button that appears below the uploaded image to make the predictions.")
 uploaded_file = st.file_uploader("Image of cat/dog to be uploaded.", type=['png','jpeg','jpg'])
 
 if uploaded_file is not None:
 
     st.write("File uploaded! File type: ",uploaded_file.type)
+    st.write("File size: ",uploaded_file.size)
+    
     image = Image.open(uploaded_file)
     st.image(image, caption = 'Uploaded file.', use_column_width = True)
     
@@ -47,9 +50,10 @@ if uploaded_file is not None:
         label = label[0][0]
                           
         if label==1:
-            st.subheader("Image is of a Dog.")
+            st.subheader("The image is of a Dog.")
         else:
-            st.subheader("Image is of a Cat.")
+            st.subheader("The image is of a Cat.")
         
     else:
         print("Please click the button to make predictions.")
+        
