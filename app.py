@@ -26,7 +26,6 @@ uploaded_file = st.file_uploader("Image of cat/dog to be uploaded.", type=['png'
 if uploaded_file is not None:
 
     st.write("File uploaded! File type: ",uploaded_file.type)
-    st.write("File size: ",uploaded_file.size)
     
     image = Image.open(uploaded_file)
     st.image(image, caption = 'Uploaded file.', use_column_width = True)
