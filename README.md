@@ -16,3 +16,6 @@ https://share.streamlit.io/yashuwar/dogs-vs-cats/app.py
 * Initially, I had used convolutional neural nets with data augmentation to make predictions but the accuracy obtained was nearly 85%.
 * For improvement, I have used the VGG16 for transfer learning, with imagenet weights untrainable.
 * If you feel the need to contact me regarding this mini-project for anything, feel free to reach out to me on LinkedIn at - https://www.linkedin.com/in/yashwardhan-banta-6566461ab/.
+
+# Data
+* You can find the data used for this mini-project at - https://www.kaggle.com/chetankv/dogs-cats-images.
